@@ -1,0 +1,27 @@
+{
+  "name": "generate-your-team",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbedard126/generate-your-team.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbedard126/generate-your-team/issues"
+  },
+  "homepage": "https://github.com/tbedard126/generate-your-team#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
