@@ -59,6 +59,12 @@ const addEmployee = () => {
             message: "What is this employees role?",
             choices: ['Engineer', 'Intern']
         },
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is the employees name?',
+
+        },
 
         {
             type: 'input',
