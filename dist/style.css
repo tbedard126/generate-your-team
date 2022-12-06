@@ -1,0 +1,26 @@
+body {
+    background-color: gray;
+}
+
+#navbar-text {
+    font-size: 64px;
+    color: blueviolet;
+    background-color: antiquewhite;
+    border-radius: 50px;
+}
+
+h3 {
+    color: blue;
+}
+
+.card {
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+h4 {
+    color: white;
+}
