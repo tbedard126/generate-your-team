@@ -28,8 +28,7 @@ You use this application to help you keep better track of your team of employees
 This was a solo project.
             
 ## Tests:
-N/A
-    
+To test this application you must download the dependancies for jest. to get the dependancies you need to open the terminal inside the file then enter npm install --save-dev jest into your terminal. after that you should just need to enter npm test inside of the terminal for you test files and that should run the tests for you.
 ## Questions:
 Email: tylerbedard126@gmail.com
 
