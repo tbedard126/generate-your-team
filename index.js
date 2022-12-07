@@ -1,20 +1,20 @@
-const generateHTML = require('./src/generateHTML');
 
+// required librarys we need
+
+const generateHTML = require('./src/generateHTML');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-
-
 
 
 // node modules
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-
+// an array to hold all of the info we get from the questions
 const teamArray = [];
 
-
+// this asks the questions for the manager
 const addManager = () => {
     return inquirer.prompt([
         {
@@ -35,11 +35,11 @@ const addManager = () => {
         },
         {
             type: 'input',
-            name: 'officeNumber',
+            name: 'office',
             message: "what is the managers office number?",
         },
     ])
-
+        // this is adding the info from the questions to the object we created for it
         .then(managerInput => {
             const { name, id, email, office } = managerInput;
             const manager = new Manager(name, id, email, office);
@@ -48,7 +48,7 @@ const addManager = () => {
             console.log(manager);
         })
 }
-
+// asking the questions for the employees
 const addEmployee = () => {
     console.log(`Adding employees to the team!`);
 
@@ -98,7 +98,7 @@ const addEmployee = () => {
 
             let { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
             let employee;
-
+            // this is checking the information based on the user input
             if (role === "Engineer") {
                 employee = new Engineer(name, id, email, github);
 
@@ -120,20 +120,20 @@ const addEmployee = () => {
         })
 
 };
-
+// this is writing the file with the info from the user
 const writeFile = data => {
     fs.writeFile('./dist/index.html', data, err => {
 
         if (err) {
             console.log(err);
             return;
-            // when the profile has been created 
+
         } else {
             console.log("Your page has been succesfully created!!")
         }
     })
 };
-
+// invoking all of the functions with the info from the user
 addManager()
     .then(addEmployee)
     .then(teamArray => {

@@ -1,4 +1,5 @@
-const generateManagerCard =  (manager) => {
+// creates the card for the manager
+const generateManagerCard = (manager) => {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
@@ -16,7 +17,8 @@ const generateManagerCard =  (manager) => {
     `;
 }
 
-const generateEngineerCard =  (engineer) => {
+// creates the card for the engineer
+const generateEngineerCard = (engineer) => {
     return `
     <div class ="col-4 mt-4">
         <div class="card h-100">
@@ -35,8 +37,8 @@ const generateEngineerCard =  (engineer) => {
     `
 }
 
-
-const generateInternCard =  (intern) => {
+// creates the card for the intern
+const generateInternCard = (intern) => {
     return `
     <div class="col-4 mt-4">
     <div class="card h-100">
@@ -54,6 +56,7 @@ const generateInternCard =  (intern) => {
     `
 }
 
+// adds the correct data to the correct card 
 generateHTML = (data) => {
 
     pageArray = [];
@@ -90,8 +93,8 @@ generateHTML = (data) => {
 
 }
 
-
-const createTeamPage =  (employeeCards) => {
+// creates the whole html page
+const createTeamPage = (employeeCards) => {
     return `
     <!DOCTYPE html>
   <html lang="en">
